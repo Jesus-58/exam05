@@ -48,7 +48,7 @@ void    apply_life(char *board, char *next_board, int ancho, int alto)
     while(index < ancho * alto)
     {
         vecinos = count_vecinos(board, ancho, alto, index % ancho, index / alto);
-        next_board[index] = (board[index] && (vecinos == 2 || vecinos == 3)) || (!board[index] && vecinos == 3);
+        next_board[index] = (board[index] && (vecinos == 2 || vecinos == 3) || (!board[index] && vecinos == 3));
         index++; 
     }
     index = 0;
